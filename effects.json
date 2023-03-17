@@ -1,27 +1,27 @@
 [
   {
-    "type": "effect_type",
-    "id": "resurrection_speed",
-    "name": [ "Resurrected Speed" ],
-    "//": "Big speed boost for a short duration to revived player",
-    "desc": [ "Big speed boost for a short duration to revived player." ],
-    "apply_message": "You gain temporary great speed!",
-    "base_mods": { "speed_mod": [ +100 ] },
-    "removes_effects": [ "grabbing" ],
+	"type": "effect_type",
+	"id": "resurrection_speed",
+	"name": [ "Resurrected Speed" ],
+	"//": "Big speed boost for a short duration to revived player",
+	"desc": [ "Big speed boost for a short duration to revived player." ],
+	"apply_message": "You gain temporary great speed!",
+	"base_mods": { "speed_mod": [ +100 ] },
+	"removes_effects": [ "grabbing" ],
 	"remove_message": "Your temporary speed boost wears off.",
-    "rating": "good",
-    "show_in_info": true
+	"rating": "good",
+	"show_in_info": true
   },
   {
-    "type": "effect_type",
-    "id": "resurrection_invisible",
-    "name": [ "Resurrection Invisibility" ],
-    "//": "Be invisible and incorporeal.",
-    "desc": [ "You are invisible." ],
-    "apply_message": "You gain temporary invisibility and incorporeality!",
-    "flags": [ "INVISIBLE" ],
-    "remove_message": "Your invisibility and incorporeality wears off.",
-    "rating": "good",
-    "show_in_info": true
+	"type": "effect_type",
+	"id": "resurrection_invisible",
+	"name": [ "Resurrection Invisibility" ],
+	"//": "Be invisible and incorporeal.",
+	"desc": [ "You are invisible." ],
+	"apply_message": "You gain temporary invisibility and incorporeality!",
+	"flags": [ "INVISIBLE" ],
+	"remove_message": "Your invisibility and incorporeality wears off.",
+	"rating": "good",
+	"show_in_info": true
   }
 ]

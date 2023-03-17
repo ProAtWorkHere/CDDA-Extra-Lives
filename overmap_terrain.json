@@ -1,10 +1,10 @@
 [
   {
-    "type": "overmap_terrain",
-    "id": "strange_stone_circle",
-    "name": "Strange Stone Circle",
-    "sym": "O",
-    "color": "red",
-    "see_cost": 1
+	"type": "overmap_terrain",
+	"id": "strange_stone_circle",
+	"name": "Strange Stone Circle",
+	"sym": "O",
+	"color": "red",
+	"see_cost": 1
   }
 ]

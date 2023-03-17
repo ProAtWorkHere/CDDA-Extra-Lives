@@ -1,13 +1,13 @@
 [
   {
-    "type": "overmap_special",
-    "id": "strange_stone_circle",
-    "overmaps": [
-      { "point": [ 0, 0, 0 ], "overmap": "strange_stone_circle_north" }
-    ],
-    "locations": [ "wilderness" ],
-    "city_distance": [ 5, -1 ],
-    "occurrences": [ 6, 6 ],
+	"type": "overmap_special",
+	"id": "strange_stone_circle",
+	"overmaps": [
+	  { "point": [ 0, 0, 0 ], "overmap": "strange_stone_circle_north" }
+	],
+	"locations": [ "wilderness" ],
+	"city_distance": [ 5, -1 ],
+	"occurrences": [ 6, 6 ],
 	"rotate": false,
 	"flags": [ "CLASSIC" ]
   }
