@@ -33,5 +33,9 @@ No matter what kind of respawn you undergo, you will always drop all worn, wield
 
 ## **Changelog**
 
+**v1.0.1:** 
+- Optimization and code formatting.
+- Moved heal/condition reset to an EoC and call it per respawn function instead of defined in each respawn EoC.
+
 **v1.0.0:** 
 - Initial public release.
