@@ -70,7 +70,7 @@
   },
   {
 	"type": "effect_on_condition",
-	"id": { "EOC_heal_and_reset_conditions"},
+	"id": "EOC_heal_and_reset_conditions",
 	"effect": [
 	{ "u_set_hp": 100, "max": true, "only_increase": false },
 	{ "u_set_hp": 100, "max": true, "only_increase": false, "target_part": "torso" },
