@@ -7,14 +7,14 @@
 	"deactivate_condition": { "compare_int": [ { "u_val": "var", "var_name": "run_once" }, "==", { "const": 1 } ] },
 	"effect": [
 	{ "arithmetic": [ { "u_val": "var", "var_name": "run_once" }, "=", { "const": 1 } ] },
-	{"u_add_var": "lives_remaining", "value": "3" }
+	{"u_add_var": "lives_remaining", "value": "2" }
 	]
   },
   {
 	"type": "effect_on_condition",
 	"id": "EOC_regain_life_time_passed_30days",
 	"recurrence": 2592000,
-	"condition": { "compare_int": [ { "u_val": "var", "var_name": "lives_remaining" }, "<", { "const": 3 } ] },
+	"condition": { "compare_int": [ { "u_val": "var", "var_name": "lives_remaining" }, "<", { "const": 2 } ] },
 	"effect": [
 	{ "u_adjust_var": "lives_remaining", "adjustment": 1 },
 	{ "u_message": "Your continued survival for 30 days has earned you an extra life!", "popup": true }
