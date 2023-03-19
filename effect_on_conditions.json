@@ -10,7 +10,7 @@
 	{"u_add_var": "lives_remaining", "value": "2" }
 	]
   },
-  {
+    {
 	"type": "effect_on_condition",
 	"id": "EOC_regain_life_time_passed_30days",
 	"recurrence": 2592000,
@@ -121,6 +121,7 @@
 	{ "u_adjust_var": "lives_remaining", "adjustment": -1 },
 	{ "u_message": "In the split-second before your life is snuffed out, you are remade!", "popup": true, "type": "good" },
 	{ "u_add_effect": "incorporeal", "duration": "30 s" },
+	{ "u_add_effect": "resurrection_climatecontrol", "duration": "300 s" },
 	{ "u_add_effect": "resurrection_invisible", "duration": "30 s" },
 	{ "u_add_effect": "resurrection_speed", "duration": "30 s" },
 	{ "run_eocs": "EOC_heal_and_reset_conditions"},
@@ -135,6 +136,10 @@
 	"effect": [
 	{ "u_adjust_var": "lives_remaining", "adjustment": -1 },
 	{ "u_message": "In the split-second before your life is snuffed out, you are remade!", "popup": true, "type": "good" },
+	{ "u_add_effect": "incorporeal", "duration": "30 s" },
+	{ "u_add_effect": "resurrection_climatecontrol", "duration": "300 s" },
+	{ "u_add_effect": "resurrection_invisible", "duration": "30 s" },
+	{ "u_add_effect": "resurrection_speed", "duration": "30 s" },
 	{ "run_eocs": "EOC_heal_and_reset_conditions"},
 	{ "u_teleport": { "global_val": "ssc_respawn_point_location" } },
 	{ "u_message": "** You have <u_val:lives_remaining> extra lives remaining! **", "type": "bad" }
@@ -147,6 +152,10 @@
 	{ "u_message": "You are remade! But you've been sent somewhere far away... (Game may appear to freeze for some time)", "popup": true, "type": "good" },
 	{ "u_location_variable": { "global_val": "respawn_far_away_point" },
 		"target_params": { "om_terrain": "field", "om_terrain_match_type": "CONTAINS", "search_range": 900, "min_distance": 600, "z": 0, "cant_see": true, "random": true } },
+	{ "u_add_effect": "incorporeal", "duration": "30 s" },
+	{ "u_add_effect": "resurrection_climatecontrol", "duration": "7200 s" },
+	{ "u_add_effect": "resurrection_invisible", "duration": "30 s" },
+	{ "u_add_effect": "resurrection_speed", "duration": "30 s" },
 	{ "run_eocs": "EOC_heal_and_reset_conditions"},
 	{ "u_teleport": { "global_val": "respawn_far_away_point" } }
 	]

@@ -33,6 +33,9 @@ No matter what kind of respawn you undergo, you will always drop all worn, wield
 
 ## **Changelog**
 
+**v1.0.3:** 
+- Added temperature resistance to respawn effects. 5 minutes for respawns with an extra life available, and randwom respawn grants 2 hours worth.
+
 **v1.0.2:** 
 - Fixed logic with extra lives being set at 3 instead of 2.
 

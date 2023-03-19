@@ -23,5 +23,17 @@
 	"remove_message": "Your invisibility and incorporeality wears off.",
 	"rating": "good",
 	"show_in_info": true
+  },
+  {
+	"type": "effect_type",
+	"id": "resurrection_climatecontrol",
+	"name": [ "Resurrection Climate-Control" ],
+	"//": "Ignore heat/cold for a duration",
+	"desc": [ "You are climate-contrlled" ],
+	"apply_message": "You gain temporary indifference to the extremes of temperature!",
+	"flags": [ "CLIMATE_CONTROL" ],
+	"remove_message": "Your indifference to the extremes of temperature wears off.",
+	"rating": "good",
+	"show_in_info": true
   }
 ]
