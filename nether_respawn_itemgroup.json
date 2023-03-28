@@ -1,0 +1,9 @@
+[
+  {
+    "type": "item_group",
+    "id": "nether_respawn_loot",
+    "items": [
+      { "item": "netherum_substrate", "count": [ 1, 2 ]  }
+    ]
+  }
+]

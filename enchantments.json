@@ -1,0 +1,11 @@
+[
+  {
+    "id": "ench_resurrect_cold_protect_random",
+    "type": "enchantment",
+    "name": { "str": "Cold Protection" },
+    "description": "You are affected by an aura that protects you from cold climates.",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [ { "value": "CLIMATE_CONTROL_HEAT", "add": 150 } ]
+  }
+]

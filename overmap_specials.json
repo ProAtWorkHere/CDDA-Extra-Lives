@@ -7,7 +7,27 @@
 	],
 	"locations": [ "wilderness" ],
 	"city_distance": [ 5, -1 ],
-	"occurrences": [ 6, 6 ],
+	"occurrences": [ 8, 12 ],
+	"rotate": false,
+	"flags": [ "CLASSIC" ]
+  },
+  {
+	"type": "overmap_special",
+	"id": "Absence Of Presence",
+	"overmaps": [
+      { "point": [ -1, 0, 0 ], "overmap": "nether_respawn_1_3_north" },
+      { "point": [ 0, 0, 0 ], "overmap": "nether_respawn_1_2_north" },
+      { "point": [ 1, 0, 0 ], "overmap": "nether_respawn_1_1_north" },
+      { "point": [ -1, 1, 0 ], "overmap": "nether_respawn_1_6_north" },
+      { "point": [ 0, 1, 0 ], "overmap": "nether_respawn_1_5_north" },
+      { "point": [ 1, 1, 0 ], "overmap": "nether_respawn_1_4_north" },
+      { "point": [ -1, 2, 0 ], "overmap": "nether_respawn_1_9_north" },
+      { "point": [ 0, 2, 0 ], "overmap": "nether_respawn_1_8_north" },
+      { "point": [ 1, 2, 0 ], "overmap": "nether_respawn_1_7_north" }
+	],
+	"locations": [ "land" ],
+	"city_distance": [ 5, -1 ],
+	"occurrences": [ 0, 2 ],
 	"rotate": false,
 	"flags": [ "CLASSIC" ]
   }

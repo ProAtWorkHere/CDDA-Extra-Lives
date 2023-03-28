@@ -1,0 +1,58 @@
+[
+  {
+    "result": "respawn_infostone",
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "survival",
+    "difficulty": 0,
+    "time": "30 s",
+    "autolearn": true,
+    "reversible": false,
+    "tools": [ [ [ "ssc_altar", -1 ] ] ],
+    "components": [ [ [ "rock", 1 ] ] ],
+    "flags": [ "BLIND_EASY" ]
+  },
+  {
+    "id": "ssc_altar",
+    "type": "TOOL",
+    "name": { "str": "nearby SSC Altar" },
+    "description": "Psuedo item.",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "material": [ "stone" ],
+    "symbol": "-",
+    "color": "white"
+  },
+  {
+    "result": "respawn_gain_max_extra_life",
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "survival",
+    "difficulty": 0,
+    "time": "30 m",
+    "autolearn": true,
+    "reversible": false,
+    "tools": [ [ [ "ssc_altar", -1 ] ] ],
+    "components": [ [ [ "netherum_substrate", 15 ] ] ],
+    "flags": [ "BLIND_EASY" ]
+  },
+  {
+    "result": "respawn_gain_extra_life",
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "survival",
+    "difficulty": 0,
+    "time": "30 m",
+    "autolearn": true,
+    "reversible": false,
+    "tools": [ [ [ "ssc_altar", -1 ] ] ],
+    "components": [ [ [ "netherum_substrate", 7 ] ] ],
+    "flags": [ "BLIND_EASY" ]
+  }
+]

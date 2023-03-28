@@ -6,5 +6,24 @@
 	"sym": "O",
 	"color": "red",
 	"see_cost": 1
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [
+      "nether_respawn_1_1",
+      "nether_respawn_1_2",
+      "nether_respawn_1_3",
+      "nether_respawn_1_4",
+      "nether_respawn_1_5",
+      "nether_respawn_1_6",
+      "nether_respawn_1_7",
+      "nether_respawn_1_8",
+      "nether_respawn_1_9"
+    ],
+    "name": "Absence of Presence",
+    "sym": " ",
+    "color": "white",
+	"entry_eoc": "EOC_enter_nether_respawn",
+    "see_cost": 1
   }
 ]

@@ -1,0 +1,24 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_nether_glass_floor_respawn",
+    "name": "black glass",
+    "description": "An endless expanse of black glass.  It perfectly reflects the darkness around it.",
+    "symbol": " ",
+    "color": "black",
+	"looks_like": "t_nether_glass_floor",
+    "move_cost": 500,
+    "flags": [ "TRANSPARENT", "FLAT", "INDOORS" ]
+  },
+  {
+    "type": "terrain",
+    "id": "t_nether_glass_wall_respawn",
+    "name": "black glass",
+    "description": "An endless expanse of black glass.  It perfectly reflects the darkness around it.",
+    "symbol": " ",
+    "color": "black",
+	"looks_like": "t_nether_glass_wall",
+    "move_cost": 0,
+    "flags": [ "WALL", "BLOCK_WIND", "INDOORS" ]
+  }
+]

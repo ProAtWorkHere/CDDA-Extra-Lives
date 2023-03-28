@@ -1,0 +1,68 @@
+[
+  {
+    "type": "TOOL",
+    "id": "respawn_infostone",
+    "name": { "str": "Respawn Info Tablet" },
+    "description": "View your remaining lives, active SSC point etc.",
+    "color": "white",
+    "use_action": {
+		"type": "effect_on_conditions", 
+		"description": "Extra Lives Info", 
+		"effect_on_conditions": [ "EOC_respawn_check_info" ] 
+		},
+    "volume": "100 ml",
+    "weight": "100 g",
+    "looks_like": "eink_tablet_pc",
+    "symbol": "#",
+    "flags": [ "ALLOWS_REMOTE_USE", "UNBREAKABLE" ]
+  },
+  {
+    "id": "respawn_gain_extra_life",
+    "name": { "str": "Netherum Anomaly" },
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "consumption_effect_on_conditions": [ "EOC_respawn_increase_extra_lives" ],
+    "description": "An odd amalgamation of exotic elements. Ingesting this utterly foreign matter will bring about forces unseen upon you, strengthening your metaphysical connection to the Nether. In practical terms, your maximum extra lives is increased by 1 (to your cap).",
+    "weight": "150 g",
+    "volume": "10 ml",
+    "looks_like": "panacea",
+    "material": [ "water" ],
+    "symbol": "*",
+    "freezing_point": -1000,
+    "spoils_in": "2880 hours",
+    "color": "c_black_red"
+  },
+  {
+    "id": "respawn_gain_max_extra_life",
+    "name": { "str": "Unreal Netherum Anomaly" },
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "consumption_effect_on_conditions": [ "EOC_respawn_increase_max_extra_lives" ],
+    "description": "An extremely odd amalgamation of many exotic elements configured in an intention, specific array. Ingesting this utterly foreign matter will bring about forces unseen upon you, strengthening your metaphysical connection to the Nether. In practical terms, you gain an extra life, up to your current maximum.",
+    "weight": "150 g",
+    "volume": "10 ml",
+    "looks_like": "panacea",
+    "material": [ "water" ],
+    "symbol": "*",
+    "freezing_point": -1000,
+    "spoils_in": "1440 hours",
+    "color": "c_black_red"
+  },
+  {
+    "id": "netherum_substrate",
+    "type": "AMMO",
+    "category": "other",
+    "name": { "str_sp": "Exotic Netherum Subtrate" },
+    "description": "A strangely perception-defying suggestion of some kind of exotic matter. Can be used to craft metaphysical anomalies.",
+    "weight": "500 g",
+    "volume": "50 ml",
+    "count": 1,
+    "stack_size": 100,
+    "looks_like": "ceramic_shard",
+    "material": [ "stone" ],
+    "symbol": "*",
+    "flags": [ "UNBREAKABLE" ],
+    "color": "c_black_red",
+    "ammo_type": "components"
+  }
+]

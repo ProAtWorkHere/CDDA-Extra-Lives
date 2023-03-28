@@ -1,37 +1,48 @@
-# Extra Lives - Extended
+# Extra Lives - Extended v1.1.0
 
-### Requires version 0.G+
+### Requires Experimental Build cdda-windows-tiles-sounds-x64-2023-03-26-0909 or newer! 0.G contains a bug with respawning that causes frequent crashes upon respawn.
 
 ## **Features:**
 
-Every scenario will start with you with 2 extra lives, which is also the maximum you can have.
+A choice of 5 difficulty levels, providing different amounts of 
 
-Every 30 days you remain alive an extra life will be granted to you, up to your maximum extra lives.
+Every scenario will start with you with a number of extra lives, which is also the maximum you can have. This maximum can be increased in-game, to a cap.
 
-Strange Stone Circles (SSC) can be found rarely in the wilderness, which contain statues that can be examined to set your current position as a respawn point. Only the most recently created respawn point is saved.
+Every 14/21/28/35 days you remain alive an extra life will be granted to you, up to your maximum extra lives, depending on your difficulty level.
+
+Strange Stone Circles (SSC) can be found rarely in the wilderness, which contain altars that can be examined to set your current position as a respawn point. Only the most recently created respawn point is saved.
 
 ## **When you die:**
 
 No matter what kind of respawn you undergo, you will always drop all worn, wielded and carried items upon death. An extra life is spent if available, and then you will be respawned; Healing your entire body, removing all negative conditions, resetting all needs to satisfied, etc. CBMs and mutations are retained, as is any mutagenic material inside you. There are 3 kinds of respawns you will experience:
 
-1. **Respawning with extra lives available and an SSC respawn point set:** You may respawn where you died, or at your SSC respawn point. If you respawn where you died, you will gain 30 seconds of invisibility, incorporeality, 100% increased speed and will push back surrounding enemies 1-2 tiles.
+**Here:** You respawn right where you died. You gain 60 seconds of great speed, invisibility, no fall damage, waterbreathing and 30 seconds of incorporeality (immune to most things but you cannot interact with physical matter). You also emit waves of force for 5 seconds, continually knocking back nearby enemies.
 
-2. **Respawning with extra lives available and no SSC respawn point set:** You will respawn where you died. Gain the same respawn benefits as above.
+**At Strange Stone Circle:** Same effects as respawning Here, except you are only given this option if you have previously found and activated an altar in a Strange Stone Circle. Brings you back to that location.
 
-3. **Respawning with no extra lives available:** You will respawn very, **VERY** far away from where you died, in an unexplored region of the map. This will be a normal field, so you are not granted the respawn benefits. Can be as far as 800 overmap tiles away.
+**Randomly:** A random location  far away from your place of death in an unexplored region is selected and you are respawned there. You are granted 5 minutes of greater speed, invisibility, water breathing and fall damage immunity, and a temporary metaphysical body suit that provides cold climate protection (covers all parts of the body and can have anything worn over it).
 
 ## **Notes:**
 
-*The statues in the Strange Stone Circles are incredibly heavy, but not impossibly immovable...
+- The altars in the Strange Stone Circles are incredibly heavy, but not impossibly immovable...
 
-*The random respawn takes some time to find a location to respawn you at. It's normal for the game to freeze up for a few moments while searching.
+- The random respawn takes some time to find a location to respawn you at. It's normal for the game to freeze up for a few moments while searching.
 
-*While Incorporeal, you are not able to interact with most things or pickup items, but you are completely immune to all damage.
+- While Incorporeal, you are not able to interact with most things or pickup items, but you are completely immune to almost all damage.
 
-*The 30-day counter for an additional extra life is not affected by dying, or any other factor. You will reliably regain an extra life every 30 days.
+- The day counter for an additional extra life is not affected by dying, or any other factor. You will reliably regain an extra life every 14/21/28/35 days, depending on difficulty.
 
 
 ## **Changelog**
+
+**v1.1.0:** 
+- Complete overhaul of the mod's internal functions: There are now 5 difficulty levels to choose from, affecting factors such as extra lives, max extra lives, max extra lives cap, respawn options and life-gain-over-time.
+- Added logic to respawning that factors in certain variables and states when offering you your respawn options.
+- New location added, related to increasing maximum extra lives and/or gaining an extra life.
+- Random respawn now gives you a special, metaphysical bodysuit that provides protection from cold climates. Anything can be worn over it and it does not count towards encumbrance. Note however, that it cannot be removed once worn, and it lasts only a few hours before disintegrating. Previous system of cold protection did not work as intended.
+- Added missions adapted to the purpose of finding your corpse/dropped items, and showing the location of your selected respawn point.
+- Added Respawn Info Tablet, crafted with a single rock while near a respawn altar. Shows you your difficulty setting, info about your current, max and cap on extra lives, and shows you your respawn point via mission menu / map.
+- Various small tweaks and number changes.
 
 **v1.0.3:** 
 - Added temperature resistance to respawn effects. 5 minutes for respawns with an extra life available, and randwom respawn grants 2 hours worth.

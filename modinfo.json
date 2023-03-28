@@ -4,9 +4,9 @@
 	"id": "extra_lives_extended",
 	"name": "Extra Lives - Extended",
 	"authors": [ "ProHere" ],
-	"description": "You start with and are capped at 2 extra lives. Every 30 days from game start, you will earn back a lost extra life to the same cap of 2. Dying with extra lives available will let you choose between resurrecting on the spot (being fully healed, refreshed, granted 30s of invisibility/incorporeality/great speed and knocking back all nearby enemies) or respawning at your most recently activated Strange Stone Circle (also fully healed and refreshed). Dying without an extra life will cause you to respawn naked extremely far away from your death location, in an unexplored area.",
+	"description": "Introduces a system of player lives, allowing you to continue playing if you die. Contains various difficulty levels to tailor the experience to your desired gameplay. More information can be found in-game upon game start.",
 	"category": "rebalance",
 	"dependencies": [ "dda" ],
-	"version": "1.0.0"
+	"version": "1.1.0"
   }
 ]
