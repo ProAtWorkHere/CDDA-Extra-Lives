@@ -4,7 +4,7 @@
 
 ## **Features:**
 
-A choice of 5 difficulty levels, providing different amounts of 
+A choice of 5 difficulty levels, providing different amounts of starting lives, maximum extra lives, maximum extra lives cap, possible respawn options and the frequency of lives gained over time.
 
 Every scenario will start with you with a number of extra lives, which is also the maximum you can have. This maximum can be increased in-game, to a cap.
 
