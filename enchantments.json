@@ -6,6 +6,6 @@
     "description": "You are affected by an aura that protects you from cold climates.",
     "has": "WORN",
     "condition": "ALWAYS",
-    "values": [ { "value": "CLIMATE_CONTROL_HEAT", "add": 150 } ]
+    "values": [ { "value": "CLIMATE_CONTROL_HEAT", "add": 120 } ]
   }
 ]

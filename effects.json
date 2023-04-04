@@ -20,7 +20,7 @@
 	"desc": [ "You are invisible, can breathe underwater and are immune to fall damage." ],
 	"apply_message": "You gain temporary invisibility, waterbreathing and immunity to fall damage!",
 	"flags": [ "INVISIBLE", "FEATHER_FALL", "GILLS", "NO_SCENT" ],
-	"remove_message": "Your invisibility and incorporeality wears off.",
+	"remove_message": "Your invisibility wears off.",
 	"rating": "good",
 	"show_in_info": true
   },
@@ -31,8 +31,15 @@
 	"//": "Fake effect to let incorporeal wearing off deliver a message",
 	"desc": [ "You are incorporeal, immune to almost everything but unable to interact with much of the physical world." ],
 	"apply_message": "You become semi-tangible to the physical world around you!",
+	"flags": [ "HEAT_IMMUNE", "NO_RADIATION", "INFECTION_IMMUNE", "PORTAL_PROOF" ],
 	"remove_message": "Your incorporeality wears off, and you once again fully exist in the physical world.",
 	"rating": "good",
 	"show_in_info": true
+  },
+  {
+	"type": "effect_type",
+	"id": "respawn_grace_time",
+	"name": [ "Resurrection Grace Timer" ],
+	"//": "Re-applies healing and effect removal every second for a duration."
   }
 ]

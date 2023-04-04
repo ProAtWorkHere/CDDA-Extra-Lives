@@ -1,15 +1,30 @@
 [
   {
 	"type": "effect_on_condition",
-	"id": "EOC_difficulty_options_begin",
-	"recurrence": 0,
-	"global": true,
-	"condition": { "compare_int": [ { "u_val": "var", "var_name": "respawn_diff_run_once" }, "!=", { "const": 1 } ] },
-	"deactivate_condition": { "compare_int": [ { "u_val": "var", "var_name": "respawn_diff_run_once" }, "==", { "const": 1 } ] },
+	"id": "EOC_difficulty_options_begin_game_start",
+	"eoc_type": "EVENT",
+	"required_event": "game_start",
 	"effect": [
-	{ "u_message": "Welcome to Extra Lives, a mod that allows you to continue your journey when you would otherwise meet an untimely end.\n\nYou start with a number of extra lives depending on your difficulty choice, and dying consumes one of these extra lives. You have a maximum number of extra lives, which can be increased up to a cap by finding a very rare encounter.\n\nIn all difficulties above Tourist, you will passively regain extra lives over time.\n\nYour death location is marked on the map, viewable via the Missions menu.\n\nYou can find Strange Stone Circles rarely in the wilderness, which have altars that can be examined to set your current position as a special respawn option.", "popup": true },
-	{ "u_message": "What happens when you die:\n\nNo matter what, upon death you will drop all of your items, be they carried, worn or wielded. Mutations, CBMs and other character-intrinsic properties are preserved.\n\nThere are 3 ways to respawn in Extra Lives, the choice of which is determined by the difficulty level. All 3 options will always fully heal you, remove negative conditions and effects, and bring your vital stats back fairly close to baseline. These 3 are:\n\n*   Here: You respawn right where you died. You gain 60 seconds of great speed, invisibility, no fall damage, waterbreathing and 30 seconds of incorporeality (immune to most things but you cannot interact with physical matter). You also emit waves of force for 5 seconds, continually knocking back nearby enemies.\n\n*   At Strange Stone Circle: Same effects as respawning Here, except you are only given this option if you have previously found and activated an altar in a Strange Stone Circle. Brings you back to that location.\n\n*   Randomly: A random location  far away from your place of death in an unexplored region is selected and you are respawned there. You are granted 5 minutes of greater speed, invisibility, water breathing and fall damage immunity, and a temporary metaphysical body suit that provides cold climate protection (covers all parts of the body and can have anything worn over it).", "popup": true },
-	{ "u_message": "Tips:\n\n   * When you die, your corpse location is displayed in the Missions Menu, and can be viewed on the Map with the mission selected.\n\n   * You can craft a Respawn Info Tablet with a single rock while near a respawn altar. Activate it to display your current difficulty, number of extra lives, maximum extra lives, maximum extra lives cap, and if you have a SSC respawn point selected, the location of that respawn point (viewable in the Missions Menu).\n\n   * Respawn altars save your current location as a respawn point when you examine one. They are incredibly heavy, but not totally impossible to move...\n\n   * Strange pockets of unreality may rarely be found, containing extremely valuable material and consumables. But beware, for within these pockets your actions are severely slowed and time passes much faster within...", "popup": true },
+	{ "u_message": "Welcome to Extra Lives, a mod that allows you to continue your journey when you would otherwise meet an untimely end.\n\nYou start with a number of extra lives depending on your difficulty choice, and dying consumes one of these extra lives. You have a maximum number of extra lives, which can be increased up to a cap by finding a very rare encounter.\n\nIn all difficulties above Tourist, you will passively regain extra lives over time.\n\nYou may discover Strange Stone Circles rarely in the wilderness, which have altars that can be examined to set your current position as a respawn location.", "popup": true },
+	{ "u_message": "What happens when you die:\n\nNo matter what, upon death you will drop all of your items, be they carried, worn or wielded. Mutations, CBMs and other character-intrinsic properties are preserved.\n\nThere are 3 ways to respawn in Extra Lives, the choice of which is determined by the difficulty level. All 3 options will always fully heal you, remove negative conditions and effects, and bring your vital stats back fairly close to baseline. These 3 are:\n\n*   Here: You respawn right where you died. You gain 60 seconds of great speed, invisibility, fall damage immunity, waterbreathing and 30 seconds of incorporeality (immune to most things but you cannot interact with physical matter). You also emit waves of force for 5 seconds, continually knocking back nearby enemies.\n\n*   At Strange Stone Circle: Same effects as respawning Here, except you are only given this option if you have previously found and activated an altar in a Strange Stone Circle. Brings you back to that location.\n\n*   Randomly: A random location far away from your place of death in an unexplored region is selected and you are respawned there. You are granted 5 minutes of the regular respawn beneficial effects and a temporary metaphysical body suit that provides climate protection.", "popup": true },
+	{ "u_message": "Tips:\n\n   * When you die, your corpse location is displayed in the Missions Menu, and can be viewed on the Map with the mission selected.\n\n   * You can craft a Respawn Info Tablet with a single rock while near a respawn altar. Activate it to display your current difficulty, number of extra lives, maximum extra lives, maximum extra lives cap, and if you have a SSC respawn point selected, the location of that respawn point (viewable in the Missions Menu).\n\n   * Respawn altars save your current location as a respawn point when you examine one. They are incredibly heavy, but not totally impossible to move...\n\n   * Strange pockets of unreality may rarely be found, containing an extremely valuable material. But beware, for within these pockets your movement is severely slowed and time passes much faster within...", "popup": true },
+	{ "u_message": "Select a difficulty level for Extra Lives:\n\nSelecting No will move to the next choice and will loop back if you don't make one.", "popup": true },
+	{ "u_add_var": "respawn_diff_selection", "value": "0" },
+	{ "u_add_var": "death_count", "value": "0" },
+	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_diff_run_once" }, "=", { "const": 1 } ] },
+	{ "run_eocs": "EOC_select_difficulty_0" }
+	]
+  },
+  {
+	"type": "effect_on_condition",
+	"id": "EOC_difficulty_options_begin_game_load_failsafe",
+	"eoc_type": "EVENT",
+	"required_event": "game_load",
+	"condition": { "compare_int": [ { "u_val": "var", "var_name": "respawn_diff_run_once" }, "!=", { "const": 1 } ] },
+	"effect": [
+	{ "u_message": "Welcome to Extra Lives, a mod that allows you to continue your journey when you would otherwise meet an untimely end.\n\nYou start with a number of extra lives depending on your difficulty choice, and dying consumes one of these extra lives. You have a maximum number of extra lives, which can be increased up to a cap by finding a very rare encounter.\n\nIn all difficulties above Tourist, you will passively regain extra lives over time.\n\nYou may discover Strange Stone Circles rarely in the wilderness, which have altars that can be examined to set your current position as a respawn location.", "popup": true },
+	{ "u_message": "What happens when you die:\n\nNo matter what, upon death you will drop all of your items, be they carried, worn or wielded. Mutations, CBMs and other character-intrinsic properties are preserved.\n\nThere are 3 ways to respawn in Extra Lives, the choice of which is determined by the difficulty level. All 3 options will always fully heal you, remove negative conditions and effects, and bring your vital stats back fairly close to baseline. These 3 are:\n\n*   Here: You respawn right where you died. You gain 60 seconds of great speed, invisibility, fall damage immunity, waterbreathing and 30 seconds of incorporeality (immune to most things but you cannot interact with physical matter). You also emit waves of force for 5 seconds, continually knocking back nearby enemies.\n\n*   At Strange Stone Circle: Same effects as respawning Here, except you are only given this option if you have previously found and activated an altar in a Strange Stone Circle. Brings you back to that location.\n\n*   Randomly: A random location far away from your place of death in an unexplored region is selected and you are respawned there. You are granted 5 minutes of the regular respawn beneficial effects and a temporary metaphysical body suit that provides climate protection.", "popup": true },
+	{ "u_message": "Tips:\n\n   * When you die, your corpse location is displayed in the Missions Menu, and can be viewed on the Map with the mission selected.\n\n   * You can craft a Respawn Info Tablet with a single rock while near a respawn altar. Activate it to display your current difficulty, number of extra lives, maximum extra lives, maximum extra lives cap, and if you have a SSC respawn point selected, the location of that respawn point (viewable in the Missions Menu).\n\n   * Respawn altars save your current location as a respawn point when you examine one. They are incredibly heavy, but not totally impossible to move...\n\n   * Strange pockets of unreality may rarely be found, containing an extremely valuable material. But beware, for within these pockets your movement is severely slowed and time passes much faster within...", "popup": true },
 	{ "u_message": "Select a difficulty level for Extra Lives:\n\nSelecting No will move to the next choice and will loop back if you don't make one.", "popup": true },
 	{ "u_add_var": "respawn_diff_selection", "value": "0" },
 	{ "u_add_var": "death_count", "value": "0" },
@@ -24,7 +39,8 @@
 	"effect": [
 	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_diff_selection" }, "=", { "const": 0 } ] },
 	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_extra_life_regain_selection" }, "=", { "const": -1 } ] },
-	{ "u_add_var": "unlimited_lives", "value": "1" }
+	{ "u_add_var": "unlimited_lives", "value": "1" },
+	{ "run_eocs": [ "EOC_choose_no_item_drop_on_death" ] }
 	],
 	"false_effect": [
 	{ "run_eocs": [ "EOC_select_difficulty_1" ] }
@@ -39,7 +55,8 @@
 	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_extra_life_regain_selection" }, "=", { "const": 0 } ] },	
 	{ "u_add_var": "lives_remaining", "value": "3" },
 	{ "u_add_var": "max_extra_lives", "value": "3" },
-	{ "u_add_var": "max_extra_lives_cap", "value": "5" }
+	{ "u_add_var": "max_extra_lives_cap", "value": "5" },
+	{ "run_eocs": [ "EOC_choose_no_item_drop_on_death" ] }
 	],
 	"false_effect": [
 	{ "run_eocs": [ "EOC_select_difficulty_2" ] }
@@ -88,6 +105,14 @@
 	],
 	"false_effect": [
 	{ "run_eocs": [ "EOC_select_difficulty_0" ] }
+	]
+  },
+  {
+	"type": "effect_on_condition",
+	"id": "EOC_choose_no_item_drop_on_death",
+	"condition": { "u_query": "By default, dying causes you to drop all items carried, worn and wielded at your death location. For difficulties below Normal, you may choose to block this behaviour; items are instead brought with you to your respawn location (only affects SSC and random respawns, and you do not receive Incorporeality for these 2 respawn types).\n\nDisable dropping items at death location? ", "default": false },
+	"effect": [
+	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_no_item_drop_on_death" }, "=", { "const": 1 } ] }
 	]
   },
   {

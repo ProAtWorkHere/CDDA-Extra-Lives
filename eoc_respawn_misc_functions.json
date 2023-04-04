@@ -188,14 +188,5 @@
 	"false_effect": [
 	{ "u_message": "You are already at your maximum extra lives!" }
 	]
-  },
-  {
-	"type": "effect_on_condition",
-	"id": "EOC_enter_nether_respawn",
-	"condition": { "compare_int": [ { "u_val": "var", "var_name": "first_time_enter_nether_respawn" }, "!=", { "const": 1 } ] },
-	"effect": [
-	{ "arithmetic": [ { "u_val": "var", "var_name": "first_time_enter_nether_respawn" }, "=", { "const": 1 } ] },
-	{ "u_message": "As you approach this bizzare un-place, you feel your thoughts and actions slow ever-so slightly just by looking at the blackness ahead of you. One could only imagine what would happen if you were to make contact with that impossible blackness... " }
-	]
   }
 ]

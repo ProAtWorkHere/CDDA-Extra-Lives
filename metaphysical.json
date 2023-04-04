@@ -11,8 +11,8 @@
     "looks_like": "jumpsuit",
     "warmth": 120,
     "color": "red",
-    "material": [ "oil" ],
-    "flags": [ "AURA", "SEMITANGIBLE", "OVERSIZE", "ONLY_ONE", "WATERPROOF", "TRADER_AVOID", "NO_TAKEOFF", "NONCONDUCTIVE" ],
+    "material": [ "plastic" ],
+    "flags": [ "AURA", "SEMITANGIBLE", "OVERSIZE", "ONLY_ONE", "WATERPROOF", "TRADER_AVOID", "UNBREAKABLE", "NONCONDUCTIVE" ],
     "relic_data": { "passive_effects": [ { "id": "ench_resurrect_cold_protect_random" } ] },
     "armor": [
       {

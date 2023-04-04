@@ -38,7 +38,59 @@
     "spell_class": "NONE",
     "base_casting_time": 100,
     "base_energy_cost": 2,
-    "min_duration": 720000,
-    "max_duration": 720000
+    "min_duration": 2880000,
+    "max_duration": 2880000
+  },
+  {
+	"id": "test_corpse_removal",
+	"name": "Test Corpse Removal",
+	"type": "SPELL",
+	"description": "Test Corpse Removal",
+	"valid_targets": [ "ground", "hostile", "ally", "self" ],
+	"effect": "effect_on_condition",
+	"effect_str": "corpse_test",
+	"shape": "blast",
+	"energy_source": "NONE",
+	"difficulty": 0,
+    "min_damage": 10000,
+    "max_damage": 10000,
+	"min_range": 16,
+	"max_range": 16,
+	"base_casting_time": 0,
+    "min_duration": 2880000,
+    "max_duration": 2880000,
+	"flags": [ "NO_FAIL", "NON_MAGICAL", "SILENT", "NO_HANDS" ]
+  },
+  {
+	"type": "effect_on_condition",
+	"id": "corpse_test",
+	"condition": {
+		"u_has_item": "corpse"
+	},
+	"effect": [
+	{ "u_message": "corpse checked" },
+	{ "u_remove_item_with": "corpse" }
+	]
+  },
+  {
+	"id": "test_mega_nuke",
+	"name": "Test Mega Nuke",
+	"type": "SPELL",
+	"description": "Test Mega Nuke",
+	"valid_targets": [ "ground", "hostile", "ally", "self" ],
+	"effect": "explosion",
+	"shape": "blast",
+	"energy_source": "NONE",
+	"difficulty": 0,
+    "min_damage": 999999999,
+    "max_damage": 999999999,
+	"min_range": 48,
+	"max_range": 48,
+	"min_aoe": 9.999999,
+	"max_aoe": 9.999999,
+	"base_casting_time": 0,
+    "min_duration": 2880000,
+    "max_duration": 2880000,
+	"flags": [ "NO_FAIL", "NON_MAGICAL", "SILENT", "NO_HANDS" ]
   }
 ]

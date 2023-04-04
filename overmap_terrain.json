@@ -20,10 +20,9 @@
       "nether_respawn_1_8",
       "nether_respawn_1_9"
     ],
-    "name": "Absence of Presence",
+    "name": "Presence of Absence",
     "sym": " ",
     "color": "white",
-	"entry_eoc": "EOC_enter_nether_respawn",
     "see_cost": 1
   }
 ]

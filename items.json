@@ -38,7 +38,7 @@
     "type": "COMESTIBLE",
     "comestible_type": "MED",
     "consumption_effect_on_conditions": [ "EOC_respawn_increase_max_extra_lives" ],
-    "description": "An extremely odd amalgamation of many exotic elements configured in an intention, specific array. Ingesting this utterly foreign matter will bring about forces unseen upon you, strengthening your metaphysical connection to the Nether. In practical terms, you gain an extra life, up to your current maximum.",
+    "description": "An extremely odd amalgamation of many exotic elements configured in an intentional, specific array. Ingesting this utterly foreign matter will bring about forces unseen upon you, strengthening your metaphysical connection to the Nether. In practical terms, you gain an extra life, up to your current maximum.",
     "weight": "150 g",
     "volume": "10 ml",
     "looks_like": "panacea",

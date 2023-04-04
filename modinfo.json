@@ -1,8 +1,8 @@
 [
   {
 	"type": "MOD_INFO",
-	"id": "extra_lives_extended",
-	"name": "Extra Lives - Extended",
+	"id": "extra_lives",
+	"name": "Extra Lives",
 	"authors": [ "ProHere" ],
 	"description": "Introduces a system of player lives, allowing you to continue playing if you die. Contains various difficulty levels to tailor the experience to your desired gameplay. More information can be found in-game upon game start.",
 	"category": "rebalance",

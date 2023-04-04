@@ -1,10 +1,10 @@
-# Extra Lives - Extended v1.1.0
+# Extra Lives - v1.1.1
 
 ### Requires Experimental Build cdda-windows-tiles-sounds-x64-2023-03-26-0909 or newer! 0.G contains a bug with respawning that causes frequent crashes upon respawn.
 
 ## **Features:**
 
-A choice of 5 difficulty levels, which provide different amounts of starting lives, maximum extra lives, maximum extra lives cap, possible respawn options and the frequency of lives gained over time.
+A choice of 5 difficulty levels, providing different amounts of starting lives, maximum extra lives, maximum extra lives cap, possible respawn options and the frequency of lives gained over time.
 
 Every scenario will start with you with a number of extra lives, which is also the maximum you can have. This maximum can be increased in-game, to a cap.
 
