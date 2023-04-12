@@ -61,7 +61,7 @@
     "looks_like": "ceramic_shard",
     "material": [ "stone" ],
     "symbol": "*",
-    "flags": [ "UNBREAKABLE" ],
+    "flags": [ "UNBREAKABLE", "MISSION_ITEM" ],
     "color": "c_black_red",
     "ammo_type": "components"
   }

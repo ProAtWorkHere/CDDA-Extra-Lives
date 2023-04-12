@@ -1,6 +1,6 @@
 # Extra Lives - v1.1.1
 
-### Requires Experimental Build x64-2023-03-26-0909 or newer! 0.G contains a bug with respawning that causes frequent crashes upon respawn.
+### Requires Experimental Build cdda-windows-tiles-sounds-x64-2023-03-26-0909 or newer! 0.G contains a bug with respawning that causes frequent crashes upon respawn.
 
 ## **Features:**
 

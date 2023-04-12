@@ -1,0 +1,45 @@
+[
+  {
+    "id": "mon_yugg_respawn",
+    "type": "MONSTER",
+    "name": { "str": "yugg" },
+    "description": "This is a huge, slimy worm-like creature.  Its pale, flattened head drips an oily mucus as it searches for prey.  Its pinkish mouth opens and closes, revealing long fangs glistening with ropey strands of saliva, which leave smoldering stains wherever they drip.",
+    "default_faction": "nether",
+	"looks_like": "mon_yugg",
+    "bodytype": "snake",
+    "species": [ "NETHER" ],
+    "diff": 10,
+    "volume": "875000 ml",
+    "weight": "200 kg",
+    "hp": 320,
+    "speed": 80,
+    "material": [ "flesh" ],
+    "symbol": "W",
+    "color": "white",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 3,
+    "melee_dice_sides": 5,
+    "melee_damage": [ { "damage_type": "cut", "amount": 8 } ],
+    "dodge": 1,
+    "armor_bash": 6,
+    "armor_elec": 3,
+    "bleed_rate": 50,
+    "harvest": "meatslug",
+    "special_attacks": [ [ "GENE_STING", 20 ] ],
+    "flags": [ "SEES", "SMELLS", "HEARS", "BASHES", "DESTROYS", "POISON", "VENOM", "NO_BREATHE" ]
+  },
+  {
+    "id": "mon_hound_tindalos_respawn",
+    "type": "MONSTER",
+	"copy-from": "mon_hound_tindalos",
+	"looks_like": "mon_headless_dog_thing"
+  },
+  {
+    "id": "mon_hound_tindalos_respawn_afterimage",
+    "type": "MONSTER",
+	"copy-from": "mon_hound_tindalos_afterimage",
+	"looks_like": "mon_headless_dog_thing"
+  }
+]

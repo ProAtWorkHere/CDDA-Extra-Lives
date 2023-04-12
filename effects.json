@@ -6,7 +6,7 @@
 	"//": "Big speed boost for a short duration to revived player",
 	"desc": [ "Big speed boost for a short duration to revived player." ],
 	"apply_message": "You gain temporary great speed!",
-	"base_mods": { "speed_mod": [ +100 ] },
+	"base_mods": { "speed_mod": [ 100 ] },
 	"removes_effects": [ "grabbing" ],
 	"remove_message": "Your temporary speed boost wears off.",
 	"rating": "good",
