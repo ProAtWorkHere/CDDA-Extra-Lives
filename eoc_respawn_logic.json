@@ -213,7 +213,7 @@
 	{ "arithmetic": [ { "u_val": "vitamin", "name": "bad_food" }, "=", { "const": 0 } ] },
 	{ "arithmetic": [ { "u_val": "vitamin", "name": "blood" }, "=", { "const": 0 } ] },
 	{ "arithmetic": [ { "u_val": "vitamin", "name": "instability" }, "=", { "const": 0 } ] },
-	{ "arithmetic": [ { "u_val": "pain" }, "=", { "const": 0 } ] },
+	{ "math": [ "u_pain()", "=", "0" ] },
 	{ "arithmetic": [ { "u_val": "morale" }, "=", { "const": 1 } ] },
 	{ "arithmetic": [ { "u_val": "stamina" }, "=", { "const": 6000 } ] },
 	{ "arithmetic": [ { "u_val": "fatigue" }, "=", { "const": 1 } ] },
