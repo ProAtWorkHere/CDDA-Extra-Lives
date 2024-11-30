@@ -5,7 +5,7 @@
 	"effect": [
 	{ "u_cast_spell": { "id": "resurrect_pushback" } },
 	{ "u_message": "A wave of force eminates from you, knocking back those around you!", "type": "good" },
-	{ "queue_eocs": "EOC_resurrect_pushback_repeat2", "time_in_future": "1 s" }
+	{ "run_eocs": "EOC_resurrect_pushback_repeat2", "time_in_future": "1 s" }
 	]
   },
   {
@@ -14,7 +14,7 @@
 	"effect": [
 	{ "u_cast_spell": { "id": "resurrect_pushback" } },
 	{ "u_message": "A wave of force eminates from you, knocking back those around you!", "type": "good" },
-	{ "queue_eocs": "EOC_resurrect_pushback_repeat3", "time_in_future": "1 s" }
+	{ "run_eocs": "EOC_resurrect_pushback_repeat3", "time_in_future": "1 s" }
 	]
   },
   {
@@ -23,7 +23,7 @@
 	"effect": [
 	{ "u_cast_spell": { "id": "resurrect_pushback" } },
 	{ "u_message": "A wave of force eminates from you, knocking back those around you!", "type": "good" },
-	{ "queue_eocs": "EOC_resurrect_pushback_repeat4", "time_in_future": "1 s" }
+	{ "run_eocs": "EOC_resurrect_pushback_repeat4", "time_in_future": "1 s" }
 	]
   },
   {
@@ -32,7 +32,7 @@
 	"effect": [
 	{ "u_cast_spell": { "id": "resurrect_pushback" } },
 	{ "u_message": "A wave of force eminates from you, knocking back those around you!", "type": "good" },
-	{ "queue_eocs": "EOC_resurrect_pushback_repeat5", "time_in_future": "1 s" }
+	{ "run_eocs": "EOC_resurrect_pushback_repeat5", "time_in_future": "1 s" }
 	]
   },
   {
@@ -47,9 +47,9 @@
   {
 	"type": "effect_on_condition",
 	"id": "EOC_respawn_check_info",
-	"condition": { "compare_int": [ { "u_val": "var", "var_name": "SSC_point_set" }, "=", { "const": 1 } ] },
+	"condition": { "compare_string": [ "SSC_point_set" , "=",  "1" ] },
 	"effect": {
-	  "switch": { "u_val": "var", "var_name": "respawn_diff_selection" },
+	  "switch": { "u_val": "respawn_diff_selection" },
       "cases": [
         {
           "case": 0,
@@ -89,7 +89,7 @@
       ]
     },
 	"false_effect": {
-	  "switch": { "u_val": "var", "var_name": "respawn_diff_selection" },
+	  "switch": { "u_val": "respawn_diff_selection" },
       "cases": [
         {
           "case": 0,
@@ -168,9 +168,9 @@
   {
 	"type": "effect_on_condition",
 	"id": "EOC_respawn_increase_max_extra_lives",
-	"condition": { "compare_num": [ { "u_val": "var", "var_name": "max_extra_lives" }, "<", { "u_val": "var", "var_name": "max_extra_lives_cap" } ] },
+	"condition": { "compare_string": [  "max_extra_lives", "<", "max_extra_lives_cap" ] },
 	"effect": [
-	{ "u_adjust_var": "max_extra_lives", "adjustment": 1 },
+	{ "math": [ "max_extra_lives", "+=", "1" ] },
 	{ "u_message": "You have gained +1 to your maximum extra lives!" }
 	],
 	"false_effect": [
@@ -180,9 +180,9 @@
   {
 	"type": "effect_on_condition",
 	"id": "EOC_respawn_increase_extra_lives",
-	"condition": { "compare_num": [ { "u_val": "var", "var_name": "lives_remaining" }, "<", { "u_val": "var", "var_name": "max_extra_lives" } ] },
+	"condition": { "compare_string": [ "lives_remaining", "<","max_extra_lives" ] },
 	"effect": [
-	{ "u_adjust_var": "lives_remaining", "adjustment": 1 },
+	{ "math": [ "lives_remaining", "+=", "1" ] },
 	{ "u_message": "You have gained an extra life!" }
 	],
 	"false_effect": [

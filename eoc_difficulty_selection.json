@@ -9,174 +9,166 @@
 	{ "u_message": "What happens when you die:\n\nNo matter what, upon death you will drop all of your items, be they carried, worn or wielded. Mutations, CBMs and other character-intrinsic properties are preserved.\n\nThere are 3 ways to respawn in Extra Lives, the choice of which is determined by the difficulty level. All 3 options will always fully heal you, remove negative conditions and effects, and bring your vital stats back fairly close to baseline. These 3 are:\n\n*   Here: You respawn right where you died. You gain 60 seconds of great speed, invisibility, fall damage immunity, waterbreathing and 30 seconds of incorporeality (immune to most things but you cannot interact with physical matter). You also emit waves of force for 5 seconds, continually knocking back nearby enemies.\n\n*   At Strange Stone Circle: Same effects as respawning Here, except you are only given this option if you have previously found and activated an altar in a Strange Stone Circle. Brings you back to that location.\n\n*   Randomly: A random location far away from your place of death in an unexplored region is selected and you are respawned there. You are granted 5 minutes of the regular respawn beneficial effects and a temporary metaphysical body suit that provides climate protection.", "popup": true },
 	{ "u_message": "Tips:\n\n   * When you die, your corpse location is displayed in the Missions Menu, and can be viewed on the Map with the mission selected.\n\n   * You can craft a Respawn Info Tablet with a single rock while near a respawn altar. Activate it to display your current difficulty, number of extra lives, maximum extra lives, maximum extra lives cap, and if you have a SSC respawn point selected, the location of that respawn point (viewable in the Missions Menu).\n\n   * Respawn altars save your current location as a respawn point when you examine one. They are incredibly heavy, but not totally impossible to move...\n\n   * Strange pockets of unreality may rarely be found, containing an extremely valuable material. But beware, for within these pockets your movement is severely slowed and time passes much faster within...", "popup": true },
 	{ "u_message": "Select a difficulty level for Extra Lives:\n\nSelecting No will move to the next choice and will loop back if you don't make one.", "popup": true },
-	{ "u_add_var": "respawn_diff_selection", "value": "0" },
-	{ "u_add_var": "death_count", "value": "0" },
-	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_diff_run_once" }, "=", { "const": 1 } ] },
-	{ "run_eocs": "EOC_select_difficulty_0" }
+		{ "math": [ "u_respawn_diff_selection", "=", "0" ] },
+		{ "math": [ "u_death_count", "=", "0" ] },
+		{ "math": [ "u_respawn_diff_run_once", "=", "1" ] },
+		{ "run_eocs": "EOC_select_difficulty_0" }
 	]
   },
-  {
-	"type": "effect_on_condition",
-	"id": "EOC_difficulty_options_begin_game_load_failsafe",
-	"eoc_type": "EVENT",
-	"required_event": "game_load",
-	"condition": { "compare_int": [ { "u_val": "var", "var_name": "respawn_diff_run_once" }, "!=", { "const": 1 } ] },
-	"effect": [
-	{ "u_message": "Welcome to Extra Lives, a mod that allows you to continue your journey when you would otherwise meet an untimely end.\n\nYou start with a number of extra lives depending on your difficulty choice, and dying consumes one of these extra lives. You have a maximum number of extra lives, which can be increased up to a cap by finding a very rare encounter.\n\nIn all difficulties above Tourist, you will passively regain extra lives over time.\n\nYou may discover Strange Stone Circles rarely in the wilderness, which have altars that can be examined to set your current position as a respawn location.", "popup": true },
-	{ "u_message": "What happens when you die:\n\nNo matter what, upon death you will drop all of your items, be they carried, worn or wielded. Mutations, CBMs and other character-intrinsic properties are preserved.\n\nThere are 3 ways to respawn in Extra Lives, the choice of which is determined by the difficulty level. All 3 options will always fully heal you, remove negative conditions and effects, and bring your vital stats back fairly close to baseline. These 3 are:\n\n*   Here: You respawn right where you died. You gain 60 seconds of great speed, invisibility, fall damage immunity, waterbreathing and 30 seconds of incorporeality (immune to most things but you cannot interact with physical matter). You also emit waves of force for 5 seconds, continually knocking back nearby enemies.\n\n*   At Strange Stone Circle: Same effects as respawning Here, except you are only given this option if you have previously found and activated an altar in a Strange Stone Circle. Brings you back to that location.\n\n*   Randomly: A random location far away from your place of death in an unexplored region is selected and you are respawned there. You are granted 5 minutes of the regular respawn beneficial effects and a temporary metaphysical body suit that provides climate protection.", "popup": true },
-	{ "u_message": "Tips:\n\n   * When you die, your corpse location is displayed in the Missions Menu, and can be viewed on the Map with the mission selected.\n\n   * You can craft a Respawn Info Tablet with a single rock while near a respawn altar. Activate it to display your current difficulty, number of extra lives, maximum extra lives, maximum extra lives cap, and if you have a SSC respawn point selected, the location of that respawn point (viewable in the Missions Menu).\n\n   * Respawn altars save your current location as a respawn point when you examine one. They are incredibly heavy, but not totally impossible to move...\n\n   * Strange pockets of unreality may rarely be found, containing an extremely valuable material. But beware, for within these pockets your movement is severely slowed and time passes much faster within...", "popup": true },
-	{ "u_message": "Select a difficulty level for Extra Lives:\n\nSelecting No will move to the next choice and will loop back if you don't make one.", "popup": true },
-	{ "u_add_var": "respawn_diff_selection", "value": "0" },
-	{ "u_add_var": "death_count", "value": "0" },
-	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_diff_run_once" }, "=", { "const": 1 } ] },
-	{ "run_eocs": "EOC_select_difficulty_0" }
-	]
-  },
+  
   {
 	"type": "effect_on_condition",
 	"id": "EOC_select_difficulty_0",
 	"condition": { "u_query": "Tourist Mode:\n\n   * Unlimited extra lives\n\n   * Respawn options: Here, At Strange Stone Circle, Randomly\n\nIn this mode, you can never truly die, and you can die as many times as you like. You may respawn in any of the 3 ways available.\n\nChoose Tourist Mode?", "default": false },
 	"effect": [
-	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_diff_selection" }, "=", { "const": 0 } ] },
-	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_extra_life_regain_selection" }, "=", { "const": -1 } ] },
-	{ "u_add_var": "unlimited_lives", "value": "1" },
+	{ "math": [ "u_respawn_diff_selection", "=", "0" ] },
+	{ "math": [ "u_respawn_extra_life_regain_selection", "=", "-1" ] },
+	{ "math": [ "u_unlimited_lives", "=", "1" ] },
 	{ "run_eocs": [ "EOC_choose_no_item_drop_on_death" ] }
 	],
 	"false_effect": [
 	{ "run_eocs": [ "EOC_select_difficulty_1" ] }
 	]
   },
+  
   {
 	"type": "effect_on_condition",
 	"id": "EOC_select_difficulty_1",
 	"condition": { "u_query": "Easy Mode:\n\n   * 3 extra lives granted at game start\n\n   * 3 extra lives maximum at game start\n\n   * Cap of 5 extra lives maximum possible\n\n   * Regain an extra life, up to your maximum, every 14 days\n\n   * Respawn options: Here, At Strange Stone Circle, Randomly\n\nIn this mode, you can never truly die. If you run out of extra lives, you will still be able to either respawn at your most recent SSC respawn point, or randomly elsewhere if you don't have one.\n\nChoose Easy Mode?", "default": false },
 	"effect": [
-	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_diff_selection" }, "=", { "const": 1 } ] },
-	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_extra_life_regain_selection" }, "=", { "const": 0 } ] },	
-	{ "u_add_var": "lives_remaining", "value": "3" },
-	{ "u_add_var": "max_extra_lives", "value": "3" },
-	{ "u_add_var": "max_extra_lives_cap", "value": "5" },
+	{ "math": [ "u_respawn_diff_selection" , "=",  "1"  ] },
+	{ "math": [ "u_respawn_extra_life_regain_selection", "=",  "0"  ] },	
+	{ "math": [ "u_lives_remaining", "=", "3" ] },
+	{ "math": [ "u_max_extra_lives", "=", "3" ] },
+	{ "math": [ "u_max_extra_lives_cap", "=", "5" ] },
 	{ "run_eocs": [ "EOC_choose_no_item_drop_on_death" ] }
 	],
 	"false_effect": [
 	{ "run_eocs": [ "EOC_select_difficulty_2" ] }
 	]
   },
+  
   {
 	"type": "effect_on_condition",
 	"id": "EOC_select_difficulty_2",
 	"condition": { "u_query": "Normal Mode:\n\n   * 2 extra lives granted at game start\n\n   * 2 extra lives maximum at game start\n\n   * Cap of 4 extra lives maximum possible\n\n   * Regain an extra life, up to your maximum, every 21 days\n\n   * Respawn options: Here, At Strange Stone Circle, Randomly\n\nThe default, base mode. In this mode, you can never truly die. If you run out of extra lives, you will respawn randomly, albeit quite far away from your death location.\n\nChoose Normal Mode?", "default": false },
 	"effect": [
-	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_diff_selection" }, "=", { "const": 2 } ] },
-	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_extra_life_regain_selection" }, "=", { "const": 1 } ] },
-	{ "u_add_var": "lives_remaining", "value": "2" },
-	{ "u_add_var": "max_extra_lives", "value": "2" },
-	{ "u_add_var": "max_extra_lives_cap", "value": "4" }
+	{ "math": [ "u_respawn_diff_selection", "=", "2" ] },
+	{ "math": [ "u_respawn_extra_life_regain_selection", "=", "1" ] },
+	{ "math": [ "u_lives_remaining", "=", "2" ] },
+	{ "math": [ "u_max_extra_lives", "=", "2" ] },
+	{ "math": [ "u_max_extra_lives_cap", "=", "4" ] }
 	],
 	"false_effect": [
 	{ "run_eocs": [ "EOC_select_difficulty_3" ] }
 	]
   },
+  
   {
 	"type": "effect_on_condition",
 	"id": "EOC_select_difficulty_3",
 	"condition": { "u_query": "Hard Mode:\n\n   * 2 extra lives granted at game start\n\n   * 2 extra lives maximum at game start\n\n   * Cap of 3 extra lives maximum possible\n\n   * Regain an extra life, up to your maximum, every 28 days\n\n   * Respawn options: Here, At Strange Stone Circle\n\nPermadeath mode. If you run out of extra lives, you will die permanently! Random respawn is not available in this mode.\n\nChoose Hard Mode?", "default": false },
 	"effect": [
-	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_diff_selection" }, "=", { "const": 3 } ] },
-	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_extra_life_regain_selection" }, "=", { "const": 2 } ] },
-	{ "u_add_var": "lives_remaining", "value": "2" },
-	{ "u_add_var": "max_extra_lives", "value": "2" },
-	{ "u_add_var": "max_extra_lives_cap", "value": "3" }
+		{ "math": [ "u_respawn_diff_selection", "=", "3" ] },
+		{ "math": [ "u_respawn_extra_life_regain_selection", "=",  "2" ] },
+		{ "math": [ "u_lives_remaining", "=", "2" ] },
+		{ "math": [ "u_max_extra_lives", "=", "2" ] },
+		{ "math": [ "u_max_extra_lives_cap", "=", "3" ] }
 	],
 	"false_effect": [
-	{ "run_eocs": [ "EOC_select_difficulty_4" ] }
+		{ "run_eocs": [ "EOC_select_difficulty_4" ] }
 	]
   },
+  
   {
 	"type": "effect_on_condition",
 	"id": "EOC_select_difficulty_4",
 	"condition": { "u_query": "Very Hard Mode:\n\n   * 1 extra life granted at game start\n\n   * 1 extra lives maximum at game start\n\n   * Cap of 2 extra lives maximum possible\n\n   * Regain an extra life, up to your maximum, every 35 days\n\n   * Respawn options: Randomly\n\nPermadeath mode. If you run out of extra lives, you will die permanently! Random respawn is the only kind of respawn available in this mode. Strange Stone Circles still exist, but they are of limited use to you, only for crafting certain items.\n\nChoose Very Hard Mode?", "default": false },
 	"effect": [
-	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_diff_selection" }, "=", { "const": 4 } ] },
-	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_extra_life_regain_selection" }, "=", { "const": 3 } ] },
-	{ "u_add_var": "lives_remaining", "value": "1" },
-	{ "u_add_var": "max_extra_lives", "value": "1" },
-	{ "u_add_var": "max_extra_lives_cap", "value": "2" }
+		{ "math": [ "u_respawn_diff_selection", "=", "4" ] },
+		{ "math": [ "u_respawn_extra_life_regain_selection", "=", "3" ] },
+		{ "math": [ "u_lives_remaining", "=", "1" ] },
+		{ "math": [ "u_max_extra_lives", "=", "1" ] },
+		{ "math": [ "u_max_extra_lives_cap", "=", "2" ] }
 	],
 	"false_effect": [
-	{ "run_eocs": [ "EOC_select_difficulty_0" ] }
+		{ "run_eocs": [ "EOC_select_difficulty_0" ] }
 	]
   },
+  
   {
 	"type": "effect_on_condition",
 	"id": "EOC_choose_no_item_drop_on_death",
 	"condition": { "u_query": "By default, dying causes you to drop all items carried, worn and wielded at your death location. For difficulties below Normal, you may choose to block this behaviour; items are instead brought with you to your respawn location (only affects SSC and random respawns, and you do not receive Incorporeality for these 2 respawn types).\n\nDisable dropping items at death location? ", "default": false },
 	"effect": [
-	{ "arithmetic": [ { "u_val": "var", "var_name": "respawn_no_item_drop_on_death" }, "=", { "const": 1 } ] }
+		{ "math": [ "u_respawn_no_item_drop_on_death", "=", "1" ] }
 	]
   },
+  
   {
 	"type": "effect_on_condition",
 	"id": "EOC_regain_life_time_passed_14days",
 	"recurrence": 1209600,
 	"condition": {
-	      "and": [
-        { "compare_num": [ { "u_val": "var", "var_name": "lives_remaining" }, "<", { "u_val": "var", "var_name": "max_extra_lives" } ] },
-		{ "compare_num": [ { "u_val": "var", "var_name": "unlimited_lives" }, "!=", { "const": 1 } ] },
-        { "compare_num": [ { "u_val": "var", "var_name": "respawn_extra_life_regain_selection" }, "=", { "const": 0 } ] }
-		]
+		"and": [
+		         { "math": [ "u_lives_remaining", "<", "u_max_extra_lives" ] },
+		         { "math": [ "u_unlimited_lives", "==", "0" ] },
+		         { "math": [ "u_respawn_extra_life_regain_selection", "==", "0" ] }
+		]		
 	},
 	"effect": [
-	{ "u_adjust_var": "lives_remaining", "adjustment": 1 },
-	{ "u_message": "Your continued survival for 14 days has earned you an extra life!", "popup": true }
+		{ "math": [ "u_lives_remaining", "++" ] }
 	]
-  },
+   },
+   
   {
 	"type": "effect_on_condition",
 	"id": "EOC_regain_life_time_passed_21days",
 	"recurrence": 1814400,
 	"condition": {
 	      "and": [
-        { "compare_num": [ { "u_val": "var", "var_name": "lives_remaining" }, "<", { "u_val": "var", "var_name": "max_extra_lives" } ] },
-		{ "compare_num": [ { "u_val": "var", "var_name": "unlimited_lives" }, "!=", { "const": 1 } ] },
-        { "compare_num": [ { "u_val": "var", "var_name": "respawn_extra_life_regain_selection" }, "=", { "const": 1 } ] }
+				 { "math": [ "u_lives_remaining", "<", "u_max_extra_lives" ] },
+		         { "math": [ "u_unlimited_lives", "==", "0" ] },
+		         { "math": [ "u_respawn_extra_life_regain_selection", "==", "1" ] }
 		]
 	},
 	"effect": [
-	{ "u_adjust_var": "lives_remaining", "adjustment": 1 },
-	{ "u_message": "Your continued survival for 21 days has earned you an extra life!", "popup": true }
+		{ "math": [ "u_lives_remaining", "++" ] },
+		{ "u_message": "Your continued survival for 21 days has earned you an extra life!", "popup": true }
 	]
   },
+
   {
 	"type": "effect_on_condition",
 	"id": "EOC_regain_life_time_passed_28days",
 	"recurrence": 2419200,
 	"condition": {
 	      "and": [
-        { "compare_num": [ { "u_val": "var", "var_name": "lives_remaining" }, "<", { "u_val": "var", "var_name": "max_extra_lives" } ] },
-		{ "compare_num": [ { "u_val": "var", "var_name": "unlimited_lives" }, "!=", { "const": 1 } ] },
-        { "compare_num": [ { "u_val": "var", "var_name": "respawn_extra_life_regain_selection" }, "=", { "const": 2 } ] }
+				 { "math": [ "u_lives_remaining", "<", "u_max_extra_lives" ] },
+		         { "math": [ "u_unlimited_lives", "==", "0" ] },
+		         { "math": [ "u_respawn_extra_life_regain_selection", "==", "2" ] }
 		]
 	},
 	"effect": [
-	{ "u_adjust_var": "lives_remaining", "adjustment": 1 },
-	{ "u_message": "Your continued survival for 28 days has earned you an extra life!", "popup": true }
+		{ "u_message": "Your continued survival for 28 days has earned you an extra life!", "popup": true },
+		{ "math": [ "u_lives_remaining", "++" ] }
 	]
   },
+
   {
 	"type": "effect_on_condition",
 	"id": "EOC_regain_life_time_passed_35days",
 	"recurrence": 3024000,
 	"condition": {
 	      "and": [
-        { "compare_num": [ { "u_val": "var", "var_name": "lives_remaining" }, "<", { "u_val": "var", "var_name": "max_extra_lives" } ] },
-		{ "compare_num": [ { "u_val": "var", "var_name": "unlimited_lives" }, "!=", { "const": 1 } ] },
-        { "compare_num": [ { "u_val": "var", "var_name": "respawn_extra_life_regain_selection" }, "=", { "const": 3 } ] }
+				 { "math": [ "u_lives_remaining", "<", "u_max_extra_lives" ] },
+		         { "math": [ "u_unlimited_lives", "==", "0" ] },
+		         { "math": [ "u_respawn_extra_life_regain_selection", "==", "3" ] }
 		]
 	},
 	"effect": [
-	{ "u_adjust_var": "lives_remaining", "adjustment": 1 },
-	{ "u_message": "Your continued survival for 35 days has earned you an extra life!", "popup": true }
-	]
+		{ "u_message": "Your continued survival for 35 days has earned you an extra life!", "popup": true },
+		{ "math": [ "u_lives_remaining", "++" ] }
+	] 
   }
 ]

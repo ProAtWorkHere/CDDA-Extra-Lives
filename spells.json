@@ -1,4 +1,23 @@
 [
+	{
+    "type": "SPELL",
+    "id": "respawn_spell",
+    "name": { "str": "respawn" },
+    "description": "healing.",
+    "valid_targets": [ "self" ],
+    "effect": "attack",
+    "effect_str": "adrenaline",
+    "shape": "blast",
+    "base_casting_time": 0,
+    "flags": [ "SILENT", "MEND_ALL", "FIRSTAID" ],
+	"min_damage": -50,
+    "max_damage": -50,
+	"min_aoe": 1,
+	"max_aoe": 1,
+	"min_duration": 1,
+	"max_duration": 1,
+    "message": "You feel healed."
+	},
   {
 	"id": "resurrect_pushback",
 	"name": "Resurrection Blastwave",

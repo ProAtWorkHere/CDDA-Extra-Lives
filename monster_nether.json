@@ -23,11 +23,8 @@
     "melee_dice_sides": 5,
     "melee_damage": [ { "damage_type": "cut", "amount": 8 } ],
     "dodge": 1,
-    "armor_bash": 6,
-    "armor_elec": 3,
     "bleed_rate": 50,
-    "harvest": "meatslug",
-    "special_attacks": [ [ "GENE_STING", 20 ] ],
+    "special_attacks": [ { "type": "leap", "cooldown": 20, "max_range": 2 } ],
     "flags": [ "SEES", "SMELLS", "HEARS", "BASHES", "DESTROYS", "POISON", "VENOM", "NO_BREATHE" ]
   },
   {

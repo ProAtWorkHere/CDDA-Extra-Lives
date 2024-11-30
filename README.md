@@ -1,6 +1,6 @@
-# Extra Lives - v1.1.1
+# Extra Lives - v1.2.0
 
-### Requires Experimental Build cdda-windows-tiles-sounds-x64-2023-03-26-0909 or newer! 0.G contains a bug with respawning that causes frequent crashes upon respawn.
+### Requires Experimental Build cdda-windows-with-graphics-and-sounds-x64-2024-11-26-0822 or newer! 
 
 ## **Features:**
 
@@ -34,6 +34,9 @@ No matter what kind of respawn you undergo, you will always drop all worn, wield
 
 
 ## **Changelog**
+
+**v1.2.0:** 
+- Updated code to function in newer releases of the game
 
 **v1.1.0:** 
 - Complete overhaul of the mod's internal functions: There are now 5 difficulty levels to choose from, affecting factors such as extra lives, max extra lives, max extra lives cap, respawn options and life-gain-over-time.
