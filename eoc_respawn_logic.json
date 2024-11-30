@@ -10,7 +10,7 @@
 			"rad_amount": [-50],
 			"hunger_amount":[-50],
 			"thirst_amount":[-50],
-			"sleepiness_amount":[-50],
+			"sleepiness_amount":[+15],
 			"stamina_amount":[50]
 		} 
 	},
