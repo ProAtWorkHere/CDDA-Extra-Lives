@@ -168,9 +168,9 @@
   {
 	"type": "effect_on_condition",
 	"id": "EOC_respawn_increase_max_extra_lives",
-	"condition": { "math": [ "u_max_extra_lives", "<", "max_extra_lives_cap" ] },
+	"condition": { "math": [ "u_max_extra_lives", "<", "u_max_extra_lives_cap" ] },
 	"effect": [
-	{ "math": [ "max_extra_lives", "+=", "1" ] },
+	{ "math": [ "u_max_extra_lives", "++" ] },
 	{ "u_message": "You have gained +1 to your maximum extra lives!" }
 	],
 	"false_effect": [
@@ -180,9 +180,9 @@
   {
 	"type": "effect_on_condition",
 	"id": "EOC_respawn_increase_extra_lives",
-	"condition": { "math": [ "u_lives_remaining", "<", "max_extra_lives" ] },
+	"condition": { "math": [ "u_lives_remaining", "<", "u_max_extra_lives" ] },
 	"effect": [
-	{ "math": [ "lives_remaining", "+=", "1" ] },
+	{ "math": [ "u_lives_remaining", "++" ] },
 	{ "u_message": "You have gained an extra life!" }
 	],
 	"false_effect": [

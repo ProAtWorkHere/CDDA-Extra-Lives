@@ -37,8 +37,8 @@
 	"id": "EOC_select_difficulty_1",
 	"condition": { "u_query": "Easy Mode:\n\n   * 3 extra lives granted at game start\n\n   * 3 extra lives maximum at game start\n\n   * Cap of 5 extra lives maximum possible\n\n   * Regain an extra life, up to your maximum, every 14 days\n\n   * Respawn options: Here, At Strange Stone Circle, Randomly\n\nIn this mode, you can never truly die. If you run out of extra lives, you will still be able to either respawn at your most recent SSC respawn point, or randomly elsewhere if you don't have one.\n\nChoose Easy Mode?", "default": false },
 	"effect": [
-	{ "math": [ "u_respawn_diff_selection" , "=",  "1"  ] },
-	{ "math": [ "u_respawn_extra_life_regain_selection", "=",  "0"  ] },	
+	{ "math": [ "u_respawn_diff_selection", "=", "1" ] },
+	{ "math": [ "u_respawn_extra_life_regain_selection", "=", "0"  ] },	
 	{ "math": [ "u_lives_remaining", "=", "3" ] },
 	{ "math": [ "u_max_extra_lives", "=", "3" ] },
 	{ "math": [ "u_max_extra_lives_cap", "=", "5" ] },
@@ -71,7 +71,7 @@
 	"condition": { "u_query": "Hard Mode:\n\n   * 2 extra lives granted at game start\n\n   * 2 extra lives maximum at game start\n\n   * Cap of 3 extra lives maximum possible\n\n   * Regain an extra life, up to your maximum, every 28 days\n\n   * Respawn options: Here, At Strange Stone Circle\n\nPermadeath mode. If you run out of extra lives, you will die permanently! Random respawn is not available in this mode.\n\nChoose Hard Mode?", "default": false },
 	"effect": [
 		{ "math": [ "u_respawn_diff_selection", "=", "3" ] },
-		{ "math": [ "u_respawn_extra_life_regain_selection", "=",  "2" ] },
+		{ "math": [ "u_respawn_extra_life_regain_selection", "=", "2" ] },
 		{ "math": [ "u_lives_remaining", "=", "2" ] },
 		{ "math": [ "u_max_extra_lives", "=", "2" ] },
 		{ "math": [ "u_max_extra_lives_cap", "=", "3" ] }
@@ -112,7 +112,7 @@
 	"recurrence": 1209600,
 	"condition": {
 		"and": [
-			{ "math": [ "u_lives_remaining", "<", "u_max_extra_lives_cap" ] },
+			{ "math": [ "u_lives_remaining", "<", "u_max_extra_lives" ] },
 			{ "math": [ "u_unlimited_lives", "==", "0" ] },
 			{ "math": [ "u_respawn_extra_life_regain_selection", "==", "0" ] }
 		]
@@ -128,7 +128,7 @@
 	"recurrence": 1814400,
 	"condition": {
 		"and": [
-			{ "math": [ "u_lives_remaining", "<", "u_max_extra_lives_cap" ] },
+			{ "math": [ "u_lives_remaining", "<", "u_max_extra_lives" ] },
 			{ "math": [ "u_unlimited_lives", "==", "0" ] },
 			{ "math": [ "u_respawn_extra_life_regain_selection", "==", "1" ] }
 		]
@@ -145,7 +145,7 @@
 	"recurrence": 2419200,
 	"condition": {
 		"and": [
-			{ "math": [ "u_lives_remaining", "<", "u_max_extra_lives_cap" ] },
+			{ "math": [ "u_lives_remaining", "<", "u_max_extra_lives" ] },
 			{ "math": [ "u_unlimited_lives", "==", "0" ] },
 			{ "math": [ "u_respawn_extra_life_regain_selection", "==", "2" ] }
 		]
@@ -162,7 +162,7 @@
 	"recurrence": 3024000,
 	"condition": {
 		"and": [
-			{ "math": [ "u_lives_remaining", "<", "u_max_extra_lives_cap" ] },
+			{ "math": [ "u_lives_remaining", "<", "u_max_extra_lives" ] },
 			{ "math": [ "u_unlimited_lives", "==", "0" ] },
 			{ "math": [ "u_respawn_extra_life_regain_selection", "==", "3" ] }
 		]

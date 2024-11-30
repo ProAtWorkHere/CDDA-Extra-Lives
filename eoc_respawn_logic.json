@@ -127,7 +127,7 @@
 	
 	"condition": {
 	      "and": [
-        { "math": [ "respawn_diff_selection", "<", "2" ] },
+        { "math": [ "u_respawn_diff_selection", "<", "2" ] },
         { "u_query": "Respawn randomly?", "default": false }
 		]
 	},
@@ -458,25 +458,25 @@
   {
 	"type": "effect_on_condition",
 	"id": "EOC_respawn_random_very_hard",
-	"effect":[
-    { "remove_active_mission": "MISSION_REACH_BODY" },
-	{ "u_cast_spell": { "id": "respawn_spell" } },
-	{ "u_message": "You are remade! But you've been sent somewhere extremely far away... (Game may appear to freeze for some time while selecting a random respawn location. Press space to continue.)", "popup": true, "type": "good" },
-	{ "u_location_variable": { "global_val": "respawn_far_away_point" },
-		"target_params": { "om_terrain": "field", "om_terrain_match_type": "CONTAINS", "search_range": 450, "min_distance": 250, "z": 0, "cant_see": true, "random": true } },
-    { "u_remove_item_with": "resurrect_cold_protection_random_only" },
-	{ "math": ["lives_remaining = ( lives_remaining - 1 )" ] },
-	{ "u_add_effect": "incorporeal", "duration": "1 s" },
-	{ "u_add_effect": "resurrection_effects", "duration": "300 s" },
-	{ "u_add_effect": "resurrection_speed", "duration": "300 s" },
-	{ "u_add_effect": "respawn_grace_time", "duration": "30 s" },
-	{ "run_eocs": "EOC_heal_and_reset_conditions"},
-	{ "u_add_effect": "cureall", "duration": "1 s", "intensity": 1 },
-	{ "u_add_effect": "panacea", "duration": "30 s", "intensity": 1 },
-	{ "u_cast_spell": { "id": "resurrect_cold_protection_random" } },
-	{ "u_location_variable": { "global_val": "respawn_death_location" } },
-	{ "run_eocs": "EOC_teleport_far_away_delay" },
-	{ "u_message": "** You have <u_val:lives_remaining> extra lives remaining! **", "type": "bad" }
+	"effect": [
+		{ "remove_active_mission": "MISSION_REACH_BODY" },
+		{ "u_cast_spell": { "id": "respawn_spell" } },
+		{ "u_message": "You are remade! But you've been sent somewhere extremely far away... (Game may appear to freeze for some time while selecting a random respawn location. Press space to continue.)", "popup": true, "type": "good" },
+		{ "u_location_variable": { "global_val": "respawn_far_away_point" },
+			"target_params": { "om_terrain": "field", "om_terrain_match_type": "CONTAINS", "search_range": 450, "min_distance": 250, "z": 0, "cant_see": true, "random": true } },
+		{ "u_remove_item_with": "resurrect_cold_protection_random_only" },
+		{ "math": ["u_lives_remaining", "--" ] },
+		{ "u_add_effect": "incorporeal", "duration": "1 s" },
+		{ "u_add_effect": "resurrection_effects", "duration": "300 s" },
+		{ "u_add_effect": "resurrection_speed", "duration": "300 s" },
+		{ "u_add_effect": "respawn_grace_time", "duration": "30 s" },
+		{ "run_eocs": "EOC_heal_and_reset_conditions"},
+		{ "u_add_effect": "cureall", "duration": "1 s", "intensity": 1 },
+		{ "u_add_effect": "panacea", "duration": "30 s", "intensity": 1 },
+		{ "u_cast_spell": { "id": "resurrect_cold_protection_random" } },
+		{ "u_location_variable": { "global_val": "respawn_death_location" } },
+		{ "run_eocs": "EOC_teleport_far_away_delay" },
+		{ "u_message": "** You have <u_val:lives_remaining> extra lives remaining! **", "type": "bad" }
 	]
   },
 	{

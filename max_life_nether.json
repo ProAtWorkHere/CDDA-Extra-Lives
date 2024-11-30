@@ -111,12 +111,12 @@
 	"condition": {
 		"and": [
 			{ "u_near_om_location": "nether_respawn_1_5", "range": 2 },
-			{ "math": [ "nether_respawn_first_visit", "!=", "1" ] }
+			{ "math": [ "u_nether_respawn_first_visit", "!=", "1" ] }
 		]
 	},
 	"effect": [
 	{ "u_message": "As you approach the bizzare tear in reality, a sense you didn't even know you had begins to buzz somewhere inside your skull. Merely gazing at the black un-reality seems to cause the buzzing to increase. Something about the darker-than-black presence of absense seems to be slowing your thoughts and actions...\n\nYou feel that making contact with it will amplify this slowing malaise dramatically.", "popup": true, "type": "bad" },
-	{ "math": [  "nether_respawn_first_visit", "=", "1" ] }
+	{ "math": [  "u_nether_respawn_first_visit", "=", "1" ] }
 	]
   }
 ]
