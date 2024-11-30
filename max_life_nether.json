@@ -109,9 +109,9 @@
 	"id": "EOC_nether_respawn_warning",
 	"eoc_type": "ACTIVATION",
 	"condition": {
-	      "and": [
-        { "u_near_om_location": "nether_respawn_1_5", "range": 2 },
-		{ "compare_string": [ "nether_respawn_first_visit", "!=", "1"  ] }
+		"and": [
+			{ "u_near_om_location": "nether_respawn_1_5", "range": 2 },
+			{ "math": [ "nether_respawn_first_visit", "!=", "1" ] }
 		]
 	},
 	"effect": [
