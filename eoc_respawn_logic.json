@@ -55,35 +55,30 @@
         {
           "case": 0,
           "effect": [
-		  { "u_message": "Case 0 selected.", "popup": true, "type": "bad" },
 		  { "run_eocs": [ "EOC_respawn_choose_here" ] }
           ]
         },
 		{
           "case": 1,
           "effect": [
-		  { "u_message": "Case 1 selected.", "popup": true, "type": "bad" },
 		  { "run_eocs": [ "EOC_respawn_check_easy_no_lives" ] }
           ]
         },
 		{
           "case": 2,
           "effect": [
-		  { "u_message": "Case 2 selected.", "popup": true, "type": "bad" },
 		  { "run_eocs": [ "EOC_respawn_normal_check_no_lives" ] }
           ]
         },
 		{
           "case": 3,
           "effect": [
-		  { "u_message": "Case 3 selected.", "popup": true, "type": "bad" },
 		  { "run_eocs": [ "EOC_respawn_choose_here" ] }
           ]
         },
 		{
           "case": 4,
           "effect": [
-		  { "u_message": "Case 4 selected.", "popup": true, "type": "bad" },
 		  { "run_eocs": [ "EOC_respawn_random_very_hard" ] }
           ]
         }
