@@ -127,7 +127,7 @@
 	
 	"condition": {
 	      "and": [
-        { "math": ["respawn_diff_selection", "<", "2" ] },
+        { "math": [ "respawn_diff_selection", "<", "2" ] },
         { "u_query": "Respawn randomly?", "default": false }
 		]
 	},
@@ -142,7 +142,7 @@
 	"type": "effect_on_condition",
 	"id": "EOC_respawn_check_SSC",
 	
-	"condition": { "math": ["u_SSC_point_set", "==", "1" ] },
+	"condition": { "math": [ "u_SSC_point_set", "==", "1" ] },
 	"effect": [
 	{ "run_eocs": [ "EOC_respawn_choose_SSC" ] }
 	],
@@ -154,7 +154,7 @@
 	"type": "effect_on_condition",
 	"id": "EOC_set_SSC_spawn_point",
 	
-	"condition": { "math": ["respawn_diff_selection", "==", "4" ] },
+	"condition": { "math": [ "u_respawn_diff_selection", "==", "4" ] },
 	"effect": [
 	{ "u_message": "You cannot set a respawn point in Very Hard mode.", "popup": true }
 	],
