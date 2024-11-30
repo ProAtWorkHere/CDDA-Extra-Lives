@@ -12,6 +12,7 @@
 		{ "math": [ "u_respawn_diff_selection", "=", "0" ] },
 		{ "math": [ "u_death_count", "=", "0" ] },
 		{ "math": [ "u_respawn_diff_run_once", "=", "1" ] },
+		{ "math": [ "u_unlimited_lives", "=", "0" ] },
 		{ "run_eocs": "EOC_select_difficulty_0" }
 	]
   },
@@ -111,25 +112,25 @@
 	"recurrence": 1209600,
 	"condition": {
 		"and": [
-		         { "math": [ "u_lives_remaining", "<", "u_max_extra_lives" ] },
-		         { "math": [ "u_unlimited_lives", "==", "0" ] },
-		         { "math": [ "u_respawn_extra_life_regain_selection", "==", "0" ] }
-		]		
+			{ "math": [ "u_lives_remaining", "<", "u_max_extra_lives_cap" ] },
+			{ "math": [ "u_unlimited_lives", "==", "0" ] },
+			{ "math": [ "u_respawn_extra_life_regain_selection", "==", "0" ] }
+		]
 	},
 	"effect": [
-		{ "math": [ "u_lives_remaining", "++" ] }
+		{ "math": [ "u_lives_remaining", "++" ] },
+		{ "u_message": "Your continued survival for 14 days has earned you an extra life!", "popup": true }
 	]
    },
-   
   {
 	"type": "effect_on_condition",
 	"id": "EOC_regain_life_time_passed_21days",
 	"recurrence": 1814400,
 	"condition": {
-	      "and": [
-				 { "math": [ "u_lives_remaining", "<", "u_max_extra_lives" ] },
-		         { "math": [ "u_unlimited_lives", "==", "0" ] },
-		         { "math": [ "u_respawn_extra_life_regain_selection", "==", "1" ] }
+		"and": [
+			{ "math": [ "u_lives_remaining", "<", "u_max_extra_lives_cap" ] },
+			{ "math": [ "u_unlimited_lives", "==", "0" ] },
+			{ "math": [ "u_respawn_extra_life_regain_selection", "==", "1" ] }
 		]
 	},
 	"effect": [
@@ -143,15 +144,15 @@
 	"id": "EOC_regain_life_time_passed_28days",
 	"recurrence": 2419200,
 	"condition": {
-	      "and": [
-				 { "math": [ "u_lives_remaining", "<", "u_max_extra_lives" ] },
-		         { "math": [ "u_unlimited_lives", "==", "0" ] },
-		         { "math": [ "u_respawn_extra_life_regain_selection", "==", "2" ] }
+		"and": [
+			{ "math": [ "u_lives_remaining", "<", "u_max_extra_lives_cap" ] },
+			{ "math": [ "u_unlimited_lives", "==", "0" ] },
+			{ "math": [ "u_respawn_extra_life_regain_selection", "==", "2" ] }
 		]
 	},
 	"effect": [
-		{ "u_message": "Your continued survival for 28 days has earned you an extra life!", "popup": true },
-		{ "math": [ "u_lives_remaining", "++" ] }
+		{ "math": [ "u_lives_remaining", "++" ] },
+		{ "u_message": "Your continued survival for 28 days has earned you an extra life!", "popup": true }
 	]
   },
 
@@ -160,15 +161,15 @@
 	"id": "EOC_regain_life_time_passed_35days",
 	"recurrence": 3024000,
 	"condition": {
-	      "and": [
-				 { "math": [ "u_lives_remaining", "<", "u_max_extra_lives" ] },
-		         { "math": [ "u_unlimited_lives", "==", "0" ] },
-		         { "math": [ "u_respawn_extra_life_regain_selection", "==", "3" ] }
+		"and": [
+			{ "math": [ "u_lives_remaining", "<", "u_max_extra_lives_cap" ] },
+			{ "math": [ "u_unlimited_lives", "==", "0" ] },
+			{ "math": [ "u_respawn_extra_life_regain_selection", "==", "3" ] }
 		]
 	},
 	"effect": [
-		{ "u_message": "Your continued survival for 35 days has earned you an extra life!", "popup": true },
-		{ "math": [ "u_lives_remaining", "++" ] }
+		{ "math": [ "u_lives_remaining", "++" ] },
+		{ "u_message": "Your continued survival for 35 days has earned you an extra life!", "popup": true }
 	] 
   }
 ]
